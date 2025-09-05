@@ -1,0 +1,287 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #ffffff);
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        0 0 0 4px #e6f0ff;
+      width: 400px;
+      max-width: 90vw;
+      padding: 3rem 2.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow:
+        0 12px 36px rgba(0, 0, 0, 0.18),
+        0 0 0 6px #c3d7ff;
+    }
+
+    h1 {
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #1a237e;
+      letter-spacing: 0.04em;
+      text-shadow: 0 1px 3px rgba(26, 35, 126, 0.3);
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      color: #3949ab;
+      user-select: none;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 0.85rem 1.2rem;
+      font-size: 1.2rem;
+      border: 2.5px solid #c5cae9;
+      border-radius: 16px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline-offset: 3px;
+      font-weight: 500;
+      color: #1a237e;
+      background: #f7f9ff;
+      box-shadow: inset 0 2px 6px rgba(26, 35, 126, 0.05);
+    }
+
+    input[type="number"]::placeholder {
+      color: #9fa8da;
+      font-weight: 400;
+    }
+
+    input[type="number"]:focus {
+      border-color: #3f51b5;
+      box-shadow: 0 0 8px #7986cb88;
+      outline: none;
+      background: #e8ebff;
+    }
+
+    button {
+      margin-top: 2rem;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #3949ab, #1a237e);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(26, 35, 126, 0.5);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    button:hover:not(:disabled) {
+      background: linear-gradient(135deg, #1a237e, #121858);
+      box-shadow: 0 10px 28px rgba(18, 24, 88, 0.7);
+    }
+
+    button:disabled {
+      background: #9fa8da;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .qris-container {
+      margin-top: 2.5rem;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 24px;
+      background: #f0f4ff;
+      box-shadow: inset 0 0 20px #c5cae9;
+      padding: 1rem 1.5rem 2rem;
+      overflow: hidden;
+    }
+
+    .qris-container img {
+      max-width: 280px;
+      max-height: 280px;
+      border-radius: 20px;
+      box-shadow: 0 12px 36px rgba(26, 35, 126, 0.25);
+      opacity: 0;
+      transform: scale(0.85);
+      animation: fadeInScale 0.6s forwards;
+      user-select: none;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .loading-spinner {
+      border: 6px solid #d1d9ff;
+      border-top: 6px solid #3949ab;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      animation: spin 1s linear infinite;
+      margin: auto;
+      box-shadow: 0 0 12px #3949ab88;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .error-message {
+      color: #e53935;
+      font-weight: 700;
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      user-select: none;
+      letter-spacing: 0.02em;
+    }
+
+    .countdown {
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #3949ab;
+      user-select: none;
+      letter-spacing: 0.03em;
+    }
+
+    .download-btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #3949ab;
+      background: #e3e9ff;
+      border: 2px solid #3949ab;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      user-select: none;
+      align-self: center;
+      text-transform: none;
+      box-shadow: 0 4px 12px rgba(57, 73, 171, 0.3);
+    }
+
+    .download-btn:hover {
+      background: #3949ab;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(57, 73, 171, 0.6);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #9fa8da;
+      user-select: none;
+    }
+
+    /* Subtle floating background circles */
+    .background-circles {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: visible;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #7986cb44, transparent 70%);
+      animation: floatUpDown 6s ease-in-out infinite alternate;
+      filter: blur(12px);
+    }
+
+    .circle.small {
+      width: 80px;
+      height: 80px;
+      bottom: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .circle.medium {
+      width: 140px;
+      height: 140px;
+      top: 20%;
+      right: 10%;
+      animation-delay: 2s;
+    }
+
+    .circle.large {
+      width: 220px;
+      height: 220px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: 4s;
+    }
+
+    @keyframes floatUpDown {
+      0% {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-20px);
+        opacity: 0.4;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .container {
+        width: 90vw;
+        padding: 2.5rem 1.8rem 3rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      button {
+        font-size: 1.1rem;
+        padding: 0.9rem;
+      }
+
+      .qris-container {
+        min-height: 280px;
+      }
+
+      .qris-container img {
+        max-width: 220px;
+        max-height: 220px;
+      }
+    }

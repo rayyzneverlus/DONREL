@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate - Cuki digital</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-circles" aria-hidden="true">
+    <div class="circle small"></div>
+    <div class="circle medium"></div>
+    <div class="circle large"></div>
+  </div>
+
+  <div class="container" role="main" aria-label="Form donasi">
+    <h1>Donate Cuki</h1>
+    <form id="donateForm" aria-describedby="desc">
+      <label for="amount">Jumlah Donate (Rp)</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        min="1000"
+        step="any"
+        placeholder="Masukkan jumlah donate..."
+        required
+        aria-required="true"
+        aria-describedby="amountHelp"
+        inputmode="numeric"
+      />
+      <small id="amountHelp" style="color:#5c6bc0; display:block; margin-top:0.3rem; font-weight: 500;">
+        Minimal Rp 1.000
+      </small>
+      <button type="submit" aria-live="polite" aria-busy="false">Buat QRIS</button>
+    </form>
+
+    <div class="qris-container" aria-live="polite" aria-atomic="true" aria-relevant="additions removals" tabindex="0">
+    </div>
+
+    <div class="error-message" role="alert" aria-live="assertive"></div>
+
+    <footer>
+      &copy; 2025 cuki digital
+    </footer>
+  </div>
+
+<script src="cukii.js"></script>
+</body>
+</html>
