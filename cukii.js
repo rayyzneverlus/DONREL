@@ -55,7 +55,7 @@
       
       let amount = parseFloat(amountInput.value);
       
-      if (isNaN(amount) || amount < 1000) {
+      if (isNaN(amount) || amount < 1) {
         errorMessage.textContent = 'Masukkan jumlah donate.';
         submitButton.disabled = false;
         submitButton.setAttribute('aria-busy', 'false');
