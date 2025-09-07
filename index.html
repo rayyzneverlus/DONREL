@@ -14,14 +14,14 @@
   </div>
 
   <div class="container" role="main" aria-label="Form donasi">
-    <h1>Donate Cuki</h1>
+    <h1>Donate Farel</h1>
     <form id="donateForm" aria-describedby="desc">
       <label for="amount">Jumlah Donate (Rp)</label>
       <input
         type="number"
         id="amount"
         name="amount"
-        min="1000"
+        min="1"
         step="any"
         placeholder="Masukkan jumlah donate..."
         required
@@ -30,7 +30,7 @@
         inputmode="numeric"
       />
       <small id="amountHelp" style="color:#5c6bc0; display:block; margin-top:0.3rem; font-weight: 500;">
-        Minimal Rp 1.000
+        Minimal Rp 1
       </small>
       <button type="submit" aria-live="polite" aria-busy="false">Buat QRIS</button>
     </form>
